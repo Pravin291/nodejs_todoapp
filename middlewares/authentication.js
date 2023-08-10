@@ -5,7 +5,7 @@ export const isAuthenticated = async(req,res,next)=>{
    
     if(!token)
       return res.status(404).json({
-        success:true,
+        success:false,
         message:"Login first"
       })
 
@@ -14,5 +14,4 @@ export const isAuthenticated = async(req,res,next)=>{
 
       next()
 
-
-}
+};
